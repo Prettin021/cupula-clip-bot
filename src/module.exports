@@ -1,0 +1,40 @@
+
+const { SlashCommandBuilder, PermissionFlagsBits } = require("discord.js");
+
+const commands = [
+  new SlashCommandBuilder()
+    .setName("gravar")
+    .setDescription("Solicitar gravação de um jogador")
+    .addUserOption(option =>
+      option.setName("jogador")
+        .setDescription("Jogador que deseja gravar")
+        .setRequired(true)
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
+
+  new SlashCommandBuilder()
+    .setName("parar")
+    .setDescription("Parar a gravação de um jogador")
+    .addUserOption(option =>
+      option.setName("jogador")
+        .setDescription("Jogador cuja gravação deseja parar")
+        .setRequired(true)
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
+
+  new SlashCommandBuilder()
+    .setName("gravacoes")
+    .setDescription("Consultar gravações"),
+
+  new SlashCommandBuilder()
+    .setName("canal-gravacoes")
+    .setDescription("Configurar canal das gravações")
+    .addChannelOption(option =>
+      option.setName("canal")
+        .setDescription("Canal para receber os vídeos")
+        .setRequired(true)
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
+];
+
+module.exports = commands.map(command => command.toJSON());
