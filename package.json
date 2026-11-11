@@ -1,0 +1,14 @@
+
+{
+  "name": "cupula-clip-bot",
+  "version": "1.0.0",
+  "description": "Bot de gerenciamento de gravações da CÚPULA MODS",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.7"
+  }
+}
