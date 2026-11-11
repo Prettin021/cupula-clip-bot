@@ -2,10 +2,11 @@
 {
   "name": "cupula-clip-bot",
   "version": "1.0.0",
-  "description": "Bot de gerenciamento de gravações da CÚPULA MODS",
+  "description": "Bot de gerenciamento de gravacoes da CUPULA MODS",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
   },
   "dependencies": {
     "discord.js": "^14.19.3",
